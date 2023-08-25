@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\Admin;
+namespace Acme\EventBundle\Controller\Admin;
 
 use App\Common\DoctrineListRepresentationFactory;
-use App\Entity\Event;
+use Acme\EventBundle\Entity\Event;
 use Doctrine\ORM\EntityManagerInterface;
 use Sulu\Bundle\MediaBundle\Media\Manager\MediaManagerInterface;
 use Sulu\Component\Security\SecuredControllerInterface;
@@ -125,8 +125,8 @@ class EventController extends AbstractController implements SecuredControllerInt
             'id' => $entity->getId(),
             'name' => $entity->getName(),
             'image' => $image
-                ? ['id' => $image->getId()]
-                : null,
+            ? ['id' => $image->getId()]
+            : null,
             'startDate' => $startDate ? $startDate->format('c') : null,
             'endDate' => $endDate ? $endDate->format('c') : null,
         ];

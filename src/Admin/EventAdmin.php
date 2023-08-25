@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Admin;
+namespace Acme\EventBundle\Admin;
 
-use App\Entity\Event;
+use Acme\EventBundle\Entity\Event;
 use Sulu\Bundle\AdminBundle\Admin\Admin;
 use Sulu\Bundle\AdminBundle\Admin\Navigation\NavigationItem;
 use Sulu\Bundle\AdminBundle\Admin\Navigation\NavigationItemCollection;

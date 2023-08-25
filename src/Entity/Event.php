@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace Acme\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Sulu\Bundle\MediaBundle\Entity\MediaInterface;
