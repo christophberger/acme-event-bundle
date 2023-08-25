@@ -1,0 +1,21 @@
+{
+	"name": "acme/event-bundle",
+	"description": "An event entity for sulu-demo",
+	"type": "symfony-bundle",
+	"require": {
+		"php": ">=8.1",
+		"symfony/framework-bundle": "^6.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"Acme\\EventBundle\\": "src/"
+		}
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Acme Dev",
+			"email": "me@acme.com"
+		}
+	]
+}
