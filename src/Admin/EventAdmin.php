@@ -72,7 +72,7 @@ class EventAdmin extends Admin
                 $this->viewBuilderFactory->createListViewBuilder(static::LIST_VIEW, '/events')
                     ->setResourceKey(Event::RESOURCE_KEY)
                     ->setListKey(Event::LIST_KEY)
-                    ->setTitle('app.events')
+                    ->setTitle('acme.event.events')
                     ->addListAdapters(['table'])
                     ->setAddView(static::ADD_FORM_VIEW)
                     ->setEditView(static::EDIT_FORM_VIEW)

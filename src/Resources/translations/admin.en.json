@@ -1,5 +1,5 @@
 {
-	"app.events": "Events",
-	"app.start_date": "Start Date",
-	"app.end_date": "End Date"
+	"acme.event.events": "Events",
+	"acme.event.start_date": "Start Date",
+	"acme.event.end_date": "End Date"
 }
