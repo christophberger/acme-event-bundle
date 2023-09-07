@@ -16,11 +16,11 @@ use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 
 class EventAdmin extends Admin
 {
-    public const LIST_VIEW = 'app.event.list';
-    public const ADD_FORM_VIEW = 'app.event.add_form';
-    public const ADD_FORM_DETAILS_VIEW = 'app.event.add_form.details';
-    public const EDIT_FORM_VIEW = 'app.event.edit_form';
-    public const EDIT_FORM_DETAILS_VIEW = 'app.event.edit_form.details';
+    public const LIST_VIEW = 'acme_event.event.list';
+    public const ADD_FORM_VIEW = 'acme_event.event.add_form';
+    public const ADD_FORM_DETAILS_VIEW = 'acme_event.event.add_form.details';
+    public const EDIT_FORM_VIEW = 'acme_event.event.edit_form';
+    public const EDIT_FORM_DETAILS_VIEW = 'acme_event.event.edit_form.details';
 
     private ViewBuilderFactoryInterface $viewBuilderFactory;
     private SecurityCheckerInterface $securityChecker;
@@ -36,7 +36,7 @@ class EventAdmin extends Admin
     public function configureNavigationItems(NavigationItemCollection $navigationItemCollection): void
     {
         if ($this->securityChecker->hasPermission(Event::SECURITY_CONTEXT, PermissionTypes::EDIT)) {
-            $rootNavigationItem = new NavigationItem('app.events');
+            $rootNavigationItem = new NavigationItem('acme_event.events');
             $rootNavigationItem->setIcon('su-calendar');
             $rootNavigationItem->setPosition(30);
             $rootNavigationItem->setView(static::LIST_VIEW);
