@@ -31,7 +31,7 @@ class AcmeEventBundle extends AbstractBundle
 					dirname(__DIR__) . '/config/forms',
 				],
 			],
-			'resources' => ['events' => ['routes' => ['list' => 'app.get_event_list', 'detail' => 'app.get_event']]],
+			'resources' => ['events' => ['routes' => ['list' => 'acme_event.get_event_list', 'detail' => 'acme_event.get_event']]],
 		]);
 	}
 }
