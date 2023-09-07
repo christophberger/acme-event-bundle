@@ -12,6 +12,11 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 class AcmeEventBundle extends AbstractBundle
 {
+	public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
+	{
+		// load an XML, PHP or Yaml file
+		$containerConfigurator->import('../config/services.xml');
+	}
 	public function prependExtension(ContainerConfigurator $container, ContainerBuilder $builder): void
 	{
 		// prepend some config option

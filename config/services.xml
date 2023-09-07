@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+	<services>
+		<service id="acme_event.admin" class="Acme\EventBundle\Admin\EventAdmin">
+			<tag name="sulu.admin"/>
+			<tag name="sulu.context" context="admin"/>
+			<argument type="service" id="Sulu\Bundle\AdminBundle\Admin\View\ViewBuilderFactoryInterface"/>
+			<argument type="service" id="sulu_security.security_checker"/>
+		</service>
+		<service id="acme_event.event_controller" class="Acme\EventBundle\Controller\Admin\EventController" public="true">
+			<argument type="service" id="App\Common\DoctrineListRepresentationFactory"/>
+			<argument type="service" id="Doctrine\ORM\EntityManagerInterface"/>
+			<argument type="service" id="Sulu\Bundle\MediaBundle\Media\Manager\MediaManagerInterface"/>
+
+			<tag name="sulu.context" context="admin"/>
+		</service>
+	</services>
+</container>
