@@ -7,7 +7,7 @@ acme_event.get_event:
 
 acme_event.post_event:
     path: /events.{_format}
-    methods: PUT
+    methods: POST
     defaults:
         _controller: acme_event.event_controller::postAction
         _format: json
