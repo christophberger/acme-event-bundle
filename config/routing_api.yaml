@@ -1,0 +1,34 @@
+acme_event.get_event:
+    path: /events/{id}.{_format}
+    methods: GET
+    defaults:
+        _controller: acme_event.event_controller::getAction
+        _format: json
+
+acme_event.post_event:
+    path: /events.{_format}
+    methods: PUT
+    defaults:
+        _controller: acme_event.event_controller::postAction
+        _format: json
+
+acme_event.get_event_list:
+    path: /events.{_format}
+    methods: GET
+    defaults:
+        _controller: acme_event.event_controller::getListAction
+        _format: json
+
+acme_event.put_event:
+    path: /events/{id}.{_format}
+    methods: PUT
+    defaults:
+        _controller: acme_event.event_controller::putAction
+        _format: json
+
+acme_event.delete_event:
+    path: /events/{id}.{_format}
+    methods: PUT
+    defaults:
+        _controller: acme_event.event_controller::deleteAction
+        _format: json

@@ -40,9 +40,6 @@ class EventController extends AbstractController implements SecuredControllerInt
         $this->mediaManager = $mediaManager;
     }
 
-    /**
-     * @Route("/admin/api/events/{id}", methods={"GET"}, name="app.get_event")
-     */
     public function getAction(int $id): Response
     {
         $event = $this->entityManager->getRepository(Event::class)->find($id);
@@ -53,9 +50,6 @@ class EventController extends AbstractController implements SecuredControllerInt
         return $this->json($this->getDataForEntity($event));
     }
 
-    /**
-     * @Route("/admin/api/events/{id}", methods={"PUT"}, name="app.put_event")
-     */
     public function putAction(Request $request, int $id): Response
     {
         $event = $this->entityManager->getRepository(Event::class)->find($id);
@@ -71,9 +65,6 @@ class EventController extends AbstractController implements SecuredControllerInt
         return $this->json($this->getDataForEntity($event));
     }
 
-    /**
-     * @Route("/admin/api/events", methods={"POST"}, name="app.post_event")
-     */
     public function postAction(Request $request): Response
     {
         $event = new Event();
@@ -87,9 +78,6 @@ class EventController extends AbstractController implements SecuredControllerInt
         return $this->json($this->getDataForEntity($event), 201);
     }
 
-    /**
-     * @Route("/admin/api/events/{id}", methods={"DELETE"}, name="app.delete_event")
-     */
     public function deleteAction(int $id): Response
     {
         /** @var Event $event */
@@ -100,9 +88,6 @@ class EventController extends AbstractController implements SecuredControllerInt
         return $this->json(null, 204);
     }
 
-    /**
-     * @Route("/admin/api/events", methods={"GET"}, name="app.get_event_list")
-     */
     public function getListAction(): Response
     {
         $listRepresentation = $this->doctrineListRepresentationFactory->createDoctrineListRepresentation(
