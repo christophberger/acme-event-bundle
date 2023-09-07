@@ -15,5 +15,7 @@
 
 			<tag name="sulu.context" context="admin"/>
 		</service>
+		<service id="Acme\EventBundle\Controller\Admin\EventController" alias="acme_event.event_controller" public="true" />
+
 	</services>
 </container>
