@@ -14,7 +14,7 @@
 			<argument type="service" id="Doctrine\ORM\EntityManagerInterface"/>
 			<argument type="service" id="Sulu\Bundle\MediaBundle\Media\Manager\MediaManagerInterface"/>
 		</service>
-		<!-- service id="Acme\EventBundle\Controller\Admin\EventController" alias="acme_event.event_controller" public="true" / -->
+		<service id="Acme\EventBundle\Controller\Admin\EventController" alias="acme_event.event_controller" public="true" />
 
 	</services>
 </container>
