@@ -2,6 +2,19 @@
 
 ## Step 1: Download the bundle
 
+Add the repository to your `composer.json`:
+
+```json
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/christophberger/acme-event-bundle.git"
+        }
+    ],
+```
+
+Then run `composer require`:
+
 ```
 composer require acme/event-bundle:dev-main
 ```
